@@ -22,7 +22,7 @@ func (h *handler) Remove(c echo.Context) error {
 
 	if h.raft.State() != raft.Leader {
 		return c.JSON(http.StatusServiceUnavailable, map[string]interface{}{
-			"error": "not the leader",
+			"error": "Not the leader",
 		})
 	}
 
